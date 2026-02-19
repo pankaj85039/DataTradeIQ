@@ -1,0 +1,144 @@
+.market-ticker {
+  background: linear-gradient(90deg, #0f0f1e 0%, #1a1a2e 100%);
+  border: 1px solid rgba(71, 85, 105, 0.3);
+  border-radius: 8px;
+  padding: 12px 0;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.ticker-label {
+  font-size: 11px;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0 20px;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.ticker-scroll {
+  overflow-x: auto;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(71, 85, 105, 0.5) transparent;
+}
+
+.ticker-scroll::-webkit-scrollbar {
+  height: 4px;
+}
+
+.ticker-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.ticker-scroll::-webkit-scrollbar-thumb {
+  background: rgba(71, 85, 105, 0.5);
+  border-radius: 2px;
+}
+
+.ticker-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(71, 85, 105, 0.7);
+}
+
+.ticker-items {
+  display: flex;
+  gap: 20px;
+  padding: 0 20px;
+  white-space: nowrap;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.ticker-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 0;
+  flex-shrink: 0;
+  min-width: fit-content;
+}
+
+.ticker-name {
+  font-size: 13px;
+  font-weight: 600;
+  color: #cbd5e1;
+  min-width: 100px;
+}
+
+.ticker-price {
+  font-size: 13px;
+  font-weight: 700;
+  color: #e2e8f0;
+  min-width: 100px;
+  text-align: right;
+  font-family: "Monaco", "Courier New", monospace;
+}
+
+.ticker-change {
+  font-size: 12px;
+  font-weight: 600;
+  min-width: 120px;
+  text-align: right;
+}
+
+.ticker-divider {
+  color: rgba(71, 85, 105, 0.3);
+  font-size: 10px;
+}
+
+.ticker-loading {
+  padding: 8px 20px;
+  color: #94a3b8;
+  font-size: 12px;
+}
+
+.ticker-error {
+  padding: 12px 20px;
+  background: rgba(255, 71, 87, 0.1);
+  border: 1px solid rgba(255, 71, 87, 0.3);
+  color: #ff4757;
+  font-size: 12px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+/* Stop animation on hover for readability */
+.ticker-items:hover {
+  animation-play-state: paused;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ticker-item {
+    gap: 8px;
+  }
+
+  .ticker-name {
+    min-width: 80px;
+    font-size: 12px;
+  }
+
+  .ticker-price {
+    font-size: 12px;
+    min-width: 80px;
+  }
+
+  .ticker-change {
+    font-size: 11px;
+    min-width: 100px;
+  }
+
+  .ticker-items {
+    gap: 15px;
+    padding: 0 12px;
+  }
+}
