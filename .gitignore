@@ -1,0 +1,50 @@
+# Frontend (Node.js)
+frontend/node_modules/
+frontend/dist/
+frontend/.env.local
+frontend/.env.*.local
+frontend/*.log
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+frontend/.DS_Store
+
+# Backend (.NET)
+backend/**/bin/
+backend/**/obj/
+backend/**/.vs/
+backend/**/.vscode/
+backend/**/.user
+backend/**/*.user
+backend/**/.suo
+backend/**/.ide/
+backend/**/.vs/
+
+# Environment files
+.env
+.env.local
+.env.*.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# OS
+Thumbs.db
+.DS_Store
+
+# Logs
+logs/
+*.log
+
+# Dependencies
+**/node_modules/
+**/packages/
+
+# Build outputs
+**/dist/
+**/build/
