@@ -4,6 +4,10 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
 
+// Add custom services
+builder.Services.AddScoped<SignalaraAPI.Services.SignalService>();
+builder.Services.AddScoped<SignalaraAPI.Services.TickerService>();
+
 // Add CORS
 builder.Services.AddCors(options =>
 {
